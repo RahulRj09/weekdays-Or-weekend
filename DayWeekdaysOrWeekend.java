@@ -1,10 +1,8 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class DayWeekdaysOrWeekend {
     static String checkDayWeekdaysOrWeekend(String day){
-        if(checkDayWeekend(day)){
+        if(checkDayWeekendOrNot(day)){
             return "Weekend";
         } else{
             return checkDayWeekdaysOrNot(day);
@@ -12,15 +10,14 @@ public class DayWeekdaysOrWeekend {
         }
     }
 
-    static  boolean checkDayWeekend(String day){
+    static  boolean checkDayWeekendOrNot(String day){
         boolean sunday = day.equalsIgnoreCase("sunday" );
         boolean saturday = day.equalsIgnoreCase("saturday");
         return sunday || saturday;
     }
 
     static String checkDayWeekdaysOrNot(String day){
-        String[] weekdaysList = { "monday", "tuesday", "Wednesday", "thursday", "friday" };
-        Set<String> weekdaysSet = new HashSet<>(Arrays.asList(weekdaysList));
+        Set<String> weekdaysSet = new HashSet<>(List.of("monday", "tuesday", "Wednesday", "thursday", "friday"));
         if(weekdaysSet.contains(day)){
             return "weekdays";
         }
