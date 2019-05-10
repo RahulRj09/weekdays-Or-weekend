@@ -10,7 +10,6 @@ public class DayWeekdaysOrWeekend {
     }
 
     static  boolean isWeekend(String day){
-        day = day.toLowerCase();
         boolean sunday = day.equals("sunday" );
         boolean saturday = day.equals("saturday");
         return sunday || saturday;
@@ -18,14 +17,14 @@ public class DayWeekdaysOrWeekend {
 
     static String checkDayWeekdaysOrNot(String day){
         Set<String> weekdaysSet = new HashSet<>(List.of("monday", "tuesday", "Wednesday", "thursday", "friday"));
-        if(weekdaysSet.contains(day.toLowerCase())){
+        if(weekdaysSet.contains(day)){
             return "weekdays";
         }
         return "invalid input";
     }
 
     public static void main(String[] args){
-        String day = args[0];
+        String day = args[0].toLowerCase();;
         String dayStatus = checkDayWeekdaysOrWeekend(day);
         System.out.println(dayStatus);
     }
