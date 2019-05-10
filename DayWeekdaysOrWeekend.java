@@ -2,15 +2,14 @@ import java.util.*;
 
 public class DayWeekdaysOrWeekend {
     static String checkDayWeekdaysOrWeekend(String day){
-        if(checkDayWeekendOrNot(day)){
+        if(isWeekend(day)){
             return "Weekend";
         } else{
             return checkDayWeekdaysOrNot(day);
-
         }
     }
 
-    static  boolean checkDayWeekendOrNot(String day){
+    static  boolean isWeekend(String day){
         boolean sunday = day.equalsIgnoreCase("sunday" );
         boolean saturday = day.equalsIgnoreCase("saturday");
         return sunday || saturday;
