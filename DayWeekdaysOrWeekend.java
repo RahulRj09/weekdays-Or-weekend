@@ -18,7 +18,7 @@ public class DayWeekdaysOrWeekend {
 
     static String checkDayWeekdaysOrNot(String day){
         Set<String> weekdaysSet = new HashSet<>(List.of("monday", "tuesday", "Wednesday", "thursday", "friday"));
-        if(weekdaysSet.contains(day)){
+        if(weekdaysSet.contains(day.toLowerCase())){
             return "weekdays";
         }
         return "invalid input";
