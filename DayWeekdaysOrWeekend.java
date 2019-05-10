@@ -3,8 +3,19 @@ public class DayWeekdaysOrWeekend {
         if(day.equalsIgnoreCase("sunday" )|| day.equalsIgnoreCase("saturday")){
             return "Weekend";
         } else{
-            return "weekdays";
+            return checkDayWeekdaysOrNot(day);
+
         }
+    }
+
+    static String checkDayWeekdaysOrNot(String day){
+        String[] weekdaysList = { "monday", "tuesday", "Wednesday", "thursday", "friday" };
+        for (int i = 0; i <weekdaysList.length; i++) {
+           if(day.equalsIgnoreCase(weekdaysList[i])){
+                return "weekdays";
+            }
+        }
+        return "invalid input";
     }
 
     public static void main(String[] args){
