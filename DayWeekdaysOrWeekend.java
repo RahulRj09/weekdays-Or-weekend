@@ -10,8 +10,9 @@ public class DayWeekdaysOrWeekend {
     }
 
     static  boolean isWeekend(String day){
-        boolean sunday = day.equalsIgnoreCase("sunday" );
-        boolean saturday = day.equalsIgnoreCase("saturday");
+        day = day.toLowerCase();
+        boolean sunday = day.equals("sunday" );
+        boolean saturday = day.equals("saturday");
         return sunday || saturday;
     }
 
