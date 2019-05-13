@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 javac WeekdaysOrWeekendChecker.java
 java WeekdaysOrWeekendChecker sunday > actual
-diff actual expectedOutput
+diff actual expectedWeekend
 java WeekdaysOrWeekendChecker rahul > actual
-diff actual expectedOutput1
+diff actual expectedInvalidInput
 java WeekdaysOrWeekendChecker monday > actual
-diff actual expectedOutput2
+diff actual expectedWeekdays
