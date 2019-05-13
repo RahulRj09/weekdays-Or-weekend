@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-javac DayWeekdaysOrWeekend.java
-java DayWeekdaysOrWeekend sunday > actual
+javac WeekdaysOrWeekendChecker.java
+java WeekdaysOrWeekendChecker sunday > actual
 diff actual expectedOutput
-java DayWeekdaysOrWeekend rahul > actual
+java WeekdaysOrWeekendChecker rahul > actual
 diff actual expectedOutput1
-java DayWeekdaysOrWeekend monday > actual
+java WeekdaysOrWeekendChecker monday > actual
 diff actual expectedOutput2
