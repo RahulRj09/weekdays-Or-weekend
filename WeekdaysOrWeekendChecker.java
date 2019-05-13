@@ -18,10 +18,7 @@ public class WeekdaysOrWeekendChecker {
 
     static boolean isWeekday(String day) {
         Set<String> weekdaysSet = new HashSet<>(List.of("monday", "tuesday", "Wednesday", "thursday", "friday"));
-        if (weekdaysSet.contains(day)) {
-            return true;
-        }
-        return false;
+        return weekdaysSet.contains(day);
     }
 
     public static void main(String[] args) {
